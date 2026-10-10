@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoviePlanet</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header id="main-header" class="header">
+    <div class="header-container">
+      
+      <a href="#" class="logo-container">
+        <h2 class="logo-text">MoviePlanet</h2>
+      </a>
+
+      <div id="search-wrapper" class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="search-input" 
+          class="search-input" 
+          placeholder="Buscar título..." 
+          autocomplete="off"
+        >
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section id="movies-grid" class="movies-grid">
+    </section>
+  </main>
+
+ 
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
