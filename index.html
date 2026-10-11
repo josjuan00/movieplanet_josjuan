@@ -4,41 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MoviePlanet</title>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="hero-mode">
 
   <header id="main-header" class="header">
+    <div class="film-edge top-edge">
+      <span class="edge-code">KODAK 5219 35MM</span>
+      <div class="sprockets"></div>
+      <span class="edge-code">▶ 12</span>
+    </div>
+
     <div class="header-container">
-      
       <a href="#" class="logo-container">
         <h2 class="logo-text">MoviePlanet</h2>
       </a>
 
       <div id="search-wrapper" class="search-wrapper">
         <span class="search-icon">🔍</span>
-        <input 
-          type="text" 
-          id="search-input" 
-          class="search-input" 
-          placeholder="Buscar título..." 
-          autocomplete="off"
-        >
+        <input type="text" id="search-input" class="search-input" placeholder="Buscar título..." autocomplete="off">
       </div>
-
     </div>
   </header>
 
-  <main class="main-content">
+
+  <section id="hero-intro" class="hero-intro">
+    <div class="hero-logo-container">
+      <h1 class="hero-logo-title">MoviePlanet</h1>
+      <p class="hero-subtitle">CATÁLOGO EN CELULOIDE DIGITAL</p>
+    </div>
+
+    <div class="central-film-wrapper">
+      <div id="central-film-track" class="central-film-track">
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Desliza para descubrir</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <main id="main-content" class="main-content">
+    
+    <nav class="categories-bar">
+      <button class="category-tag active" data-genre="all">Todos</button>
+      <button class="category-tag" data-genre="28">Acción</button>
+      <button class="category-tag" data-genre="35">Comedia</button>
+      <button class="category-tag" data-genre="18">Drama</button>
+      <button class="category-tag" data-genre="878">Ciencia Ficción</button>
+      <button class="category-tag" data-genre="27">Terror</button>
+    </nav>
+
     <section id="movies-grid" class="movies-grid">
     </section>
   </main>
 
- 
+  <footer class="site-footer">
+    <div class="footer-container">
+      <article class="film-frame">
+        <span class="frame-number">01</span>
+        <h3 class="footer-logo">MoviePlanet</h3>
+        <div class="footer-socials">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+            <img src="sources/icons/github.png" alt="GitHub" class="social-icon-img">
+            <span>GitHub</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
+            <img src="sources/icons/instagram.png" alt="Instagram" class="social-icon-img">
+            <span>Instagram</span>
+          </a>
+        </div>
+      </article>
+
+      <div class="frame-line"></div>
+
+      <article class="film-frame">
+        <span class="frame-number">02</span>
+        <h4>Atribución & Legal</h4>
+        <p class="tmdb-notice">Datos e imágenes proporcionados por la API de TMDB.</p>
+        <p class="copyright">&copy; 2026 MoviePlanet.</p>
+      </article>
+    </div>
+
+    <div class="film-edge bottom-edge">
+      <span class="edge-code">EASTMAN SAFETY FILM</span>
+      <div class="sprockets"></div>
+      <span class="edge-code">▶ 12A</span>
+    </div>
+  </footer>
+
   <script src="js/config.js"></script>
   <script src="js/app.js"></script>
 </body>
