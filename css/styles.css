@@ -1461,7 +1461,7 @@ body.theme-matrix {
 .social-icon-img {
   width: 16px;
   height: 16px;
-  object-fit: contain;
+  object-fit: contain !important; 
   filter: brightness(0) invert(0.9);
 }
 

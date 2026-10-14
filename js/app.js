@@ -7,6 +7,7 @@ const getApiKey = () => (typeof API_KEY !== 'undefined' ? API_KEY : '');
 const PLACEHOLDER_POSTER = 'https://placehold.co/500x750/161616/f2f0e9?text=Sin+Imagen';
 const BLANK_IMG = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
+
 function escapeHTML(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -184,7 +185,6 @@ function saveUserNotesData(movieId, rating, note) {
 
 
 function showToast(message) {
-  // Si hay un modal abierto, el toast debe vivir dentro de él (capa superior)
   const host = document.querySelector('dialog[open]') || document.body;
   let container = host.querySelector(':scope > .toast-container');
   if (!container) {
@@ -562,7 +562,6 @@ function displayMovies(movies, append = false) {
   if (!append) {
     currentLoadedMovies = Array.isArray(movies) ? [...movies] : [];
   } else if (Array.isArray(movies)) {
-    // TMDB puede repetir películas entre páginas: evitamos duplicados
     const existingIds = new Set(currentLoadedMovies.map(m => m.id));
     currentLoadedMovies = [...currentLoadedMovies, ...movies.filter(m => !existingIds.has(m.id))];
   }
