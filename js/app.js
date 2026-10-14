@@ -267,7 +267,7 @@ function applyTheme(theme) {
 let savedTheme = 'sepia';
 try {
   savedTheme = localStorage.getItem('movieplanet_theme') || 'sepia';
-} catch (e) { /* sin acceso a localStorage */ }
+} catch (e) { }
 if (![...themeOptions].some(o => o.dataset.theme === savedTheme)) savedTheme = 'sepia';
 applyTheme(savedTheme);
 
@@ -1151,7 +1151,7 @@ headerNavButtons.forEach(btn => {
     const view = btn.dataset.view;
     if (!LIST_KEYS[view]) return;
 
-    catalogRequestId++; // cancela cargas pendientes del catálogo
+    catalogRequestId++;
     headerNavButtons.forEach(b => b.classList.remove('active'));
     categoryCards.forEach(c => c.classList.remove('active'));
     btn.classList.add('active');
