@@ -3,97 +3,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MoviePlanet</title>
+  <title>MOVIEPLANET | Tu Plataforma de Cine</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127902;</text></svg>">
+  <!-- Tipografías de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de Estilos -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="hero-mode">
 
-  <header id="main-header" class="header">
-    <div class="film-edge top-edge">
-      <span class="edge-code">KODAK 5219 35MM</span>
-      <div class="sprockets"></div>
-      <span class="edge-code">▶ 12</span>
-    </div>
-
-    <div class="header-container">
-      <a href="#" class="logo-container">
-        <h2 class="logo-text">MoviePlanet</h2>
-      </a>
-
-      <div id="search-wrapper" class="search-wrapper">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="search-input" class="search-input" placeholder="Buscar título..." autocomplete="off">
-      </div>
-    </div>
-  </header>
-
-
-  <section id="hero-intro" class="hero-intro">
+  <section class="hero-intro" id="hero-intro">
     <div class="hero-logo-container">
-      <h1 class="hero-logo-title">MoviePlanet</h1>
-      <p class="hero-subtitle">CATÁLOGO EN CELULOIDE DIGITAL</p>
+      <h1 class="hero-logo-title">MOVIE<span>PLANET</span></h1>
+      <p class="hero-subtitle">EL UNIVERSO DEL SÉPTIMO ARTE</p>
     </div>
 
+    <!-- Cinta de fotogramas animada -->
     <div class="central-film-wrapper">
-      <div id="central-film-track" class="central-film-track">
+      <div class="central-film-track" id="central-film-track">
+        <!-- Carga dinámica mediante JS -->
       </div>
     </div>
 
     <div class="scroll-hint">
-      <span>Desliza para descubrir</span>
+      <span>Desplázate hacia abajo para explorar</span>
       <div class="scroll-arrow">↓</div>
     </div>
   </section>
 
-  <main id="main-content" class="main-content">
-    
-    <nav class="categories-bar">
-      <button class="category-tag active" data-genre="all">Todos</button>
-      <button class="category-tag" data-genre="28">Acción</button>
-      <button class="category-tag" data-genre="35">Comedia</button>
-      <button class="category-tag" data-genre="18">Drama</button>
-      <button class="category-tag" data-genre="878">Ciencia Ficción</button>
-      <button class="category-tag" data-genre="27">Terror</button>
-    </nav>
-
-    <section id="movies-grid" class="movies-grid">
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <article class="film-frame">
-        <span class="frame-number">01</span>
-        <h3 class="footer-logo">MoviePlanet</h3>
-        <div class="footer-socials">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
-            <img src="sources/icons/github.png" alt="GitHub" class="social-icon-img">
-            <span>GitHub</span>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
-            <img src="sources/icons/instagram.png" alt="Instagram" class="social-icon-img">
-            <span>Instagram</span>
-          </a>
+  <header class="header">
+    <div class="header-container">
+      <nav class="header-nav">
+        <!-- Menú desplegable "Mi Filmoteca" -->
+        <div class="filmoteca-dropdown-container" id="filmoteca-dropdown-container">
+          <button type="button" class="filmoteca-dropdown-btn" id="filmoteca-dropdown-btn" title="Mi Filmoteca" aria-haspopup="true">
+            <span class="btn-icon">🎬</span><span class="btn-label">Mi Filmoteca</span>
+          </button>
+          <div class="filmoteca-dropdown-menu">
+            <button type="button" class="header-nav-btn" data-view="favorites">❤️ Favoritos</button>
+            <button type="button" class="header-nav-btn" data-view="watched">👁️ Vistos</button>
+            <button type="button" class="header-nav-btn" data-view="watchlist">📌 Mi Lista</button>
+          </div>
         </div>
-      </article>
 
-      <div class="frame-line"></div>
+        <div class="themes-dropdown-container" id="themes-dropdown-container">
+          <button type="button" class="themes-dropdown-btn" id="themes-dropdown-btn" title="Temas" aria-haspopup="true">
+            <span class="btn-icon">🎨</span><span class="btn-label">Temas</span>
+          </button>
+          <div class="themes-dropdown-menu">
+            <button type="button" class="theme-option" data-theme="sepia"><span class="theme-dot" style="--dot:#d4a359"></span>Dune</button>
+            <button type="button" class="theme-option" data-theme="cyberpunk"><span class="theme-dot" style="--dot:#00f3ff"></span>Cyberpunk</button>
+            <button type="button" class="theme-option" data-theme="redcarpet"><span class="theme-dot" style="--dot:#e63946"></span>Red Carpet</button>
+            <button type="button" class="theme-option" data-theme="matrix"><span class="theme-dot" style="--dot:#00ff66"></span>Matrix</button>
+          </div>
+        </div>
 
-      <article class="film-frame">
-        <span class="frame-number">02</span>
-        <h4>Atribución & Legal</h4>
-        <p class="tmdb-notice">Datos e imágenes proporcionados por la API de TMDB.</p>
-        <p class="copyright">&copy; 2026 MoviePlanet.</p>
-      </article>
+        <button type="button" class="quiz-btn" id="quiz-btn" title="¿Qué veo hoy?">
+          <span class="btn-icon">🎯</span><span class="btn-label">¿Qué veo hoy?</span>
+        </button>
+        <button type="button" class="random-btn" id="random-movie-btn" title="Sorpréndeme">
+          <span class="btn-icon">🎲</span><span class="btn-label">Sorpréndeme</span>
+        </button>
+      </nav>
+
+      <a href="#" class="logo-container" id="logo-link" aria-label="MoviePlanet, ir al inicio">
+        <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <g transform="rotate(-22 24 24)">
+            <ellipse cx="24" cy="24" rx="21" ry="7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 2.2"/>
+          </g>
+          <circle cx="24" cy="24" r="11.5" fill="var(--bg-color)" stroke="currentColor" stroke-width="2.5"/>
+          <polygon points="21,18.5 21,29.5 30,24" fill="currentColor"/>
+          <g transform="rotate(-22 24 24)">
+            <path d="M3 24 A21 7.5 0 0 0 45 24" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 2.2"/>
+          </g>
+        </svg>
+        <span class="logo-text"><span class="logo-movie">MOVIE</span><span class="logo-planet">PLANET</span></span>
+      </a>
+
+      <div class="search-wrapper" id="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Buscar película..." aria-label="Buscar película" autocomplete="off">
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    
+    <div class="catalog-controls-bar" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 0.8rem;">
+        <button id="back-to-home-btn" class="back-to-home-btn" style="display: none;">
+          ← Volver al inicio
+        </button>
+        <h2 class="section-heading" id="catalog-title" style="margin-bottom: 0;">🎬 Tú página de cine</h2>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+      
+        <div id="inline-genre-wrapper" style="display: none; align-items: center; gap: 0.4rem;">
+          <label for="inline-genre-select" style="font-size: 0.82rem; color: var(--text-secondary);">Género:</label>
+          <select id="inline-genre-select" class="theme-select">
+            <option value="all">Todos los géneros</option>
+            <option value="28">Acción</option>
+            <option value="12">Aventura</option>
+            <option value="16">Animación</option>
+            <option value="35">Comedia</option>
+            <option value="80">Crimen</option>
+            <option value="99">Documental</option>
+            <option value="18">Drama</option>
+            <option value="10751">Familia</option>
+            <option value="14">Fantasía</option>
+            <option value="36">Historia</option>
+            <option value="27">Terror</option>
+            <option value="10402">Música</option>
+            <option value="9648">Misterio</option>
+            <option value="10749">Romance</option>
+            <option value="878">Ciencia Ficción</option>
+            <option value="53">Thriller</option>
+          </select>
+          
+        </div>
+
+       
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <label for="sort-select" style="font-size: 0.82rem; color: var(--text-secondary);">Ordenar:</label>
+          <select id="sort-select" class="theme-select">
+            <option value="popular">Más Populares</option>
+            <option value="rating_desc">Mejor Valoradas</option>
+            <option value="date_desc">Más Recientes</option>
+            <option value="title_asc">Título (A-Z)</option>
+          </select>
+        </div>
+      </div>
     </div>
 
-    <div class="film-edge bottom-edge">
-      <span class="edge-code">EASTMAN SAFETY FILM</span>
+    <section class="banner-section">
+      <h3 class="section-heading">🔥 Estrenos en Cartelera</h3>
+      <div class="featured-banner-track" id="featured-banner-track">
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <h3 class="section-heading">🍿 Explorar por Género</h3>
+      <div class="category-cards-grid">
+        <div class="category-card active" data-genre="all">
+          <span>🎬</span>
+          <h3>Todos</h3>
+        </div>
+        <div class="category-card" data-genre="28">
+          <span>💥</span>
+          <h3>Acción</h3>
+        </div>
+        <div class="category-card" data-genre="35">
+          <span>😂</span>
+          <h3>Comedia</h3>
+        </div>
+        <div class="category-card" data-genre="27">
+          <span>😱</span>
+          <h3>Terror</h3>
+        </div>
+        <div class="category-card" data-genre="878">
+          <span>🚀</span>
+          <h3>CiFi</h3>
+        </div>
+        <div class="category-card" data-genre="10749">
+          <span>❤️</span>
+          <h3>Romance</h3>
+        </div>
+      </div>
+
+    </section>
+    <section class="movies-grid" id="movies-grid">
+    </section>
+
+    <div class="load-more-container">
+      <button id="load-more-btn" class="load-more-btn">🎞️ Cargar más fotogramas</button>
+    </div>
+
+  </main>
+
+  <dialog id="movie-modal" class="movie-modal">
+    <div class="modal-body">
+      <button id="modal-close-btn" class="modal-close" aria-label="Cerrar modal">✕</button>
+
+      <div id="modal-bg-glow" style="position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.15; filter: blur(30px); pointer-events: none; z-index: 0;"></div>
+
+      <div class="modal-top-grid" style="position: relative; z-index: 1;">
+        <div class="modal-poster">
+          <img id="modal-poster" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Póster de la película">
+        </div>
+
+        <div class="modal-info">
+          <h2 id="modal-title" style="font-family: var(--font-title); font-size: 1.8rem;">Cargando...</h2>
+          
+          <div style="display: flex; gap: 1rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--gold-accent);">
+            <span id="modal-rating">★ N/D</span>
+            <span id="modal-date">📅 N/D</span>
+            <span id="modal-runtime">⏱️ N/D</span>
+          </div>
+
+          <div id="modal-genres"></div>
+
+          <p id="modal-overview" class="modal-overview" style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            Obteniendo detalles de la película...
+          </p>
+
+          <div id="modal-credits"></div>
+        </div>
+      </div>
+
+      <div id="modal-trailer-container" style="position: relative; z-index: 1; margin-top: 1rem;"></div>
+
+      <div id="modal-recommendations" style="position: relative; z-index: 1; margin-top: 1rem;"></div>
+    </div>
+  </dialog>
+
+  <dialog id="quiz-modal" class="quiz-modal">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h3 style="font-family: var(--font-title); font-size: 1.1rem; color: var(--gold-accent);">🎯 ¿Qué veo hoy?</h3>
+      <button id="quiz-close-btn" class="modal-close" style="position: relative; top: 0; right: 0; width: 30px; height: 30px; font-size: 1rem;" aria-label="Cerrar test">✕</button>
+    </div>
+    <div id="quiz-step-container">
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="film-edge">
+      <span class="edge-code">MOVIEPLANET 35MM</span>
       <div class="sprockets"></div>
-      <span class="edge-code">▶ 12A</span>
+      <span class="edge-code">KODAK 500T</span>
+    </div>
+
+    <div class="footer-container">
+      <div class="film-frame">
+        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-secondary);">
+          &copy; 2026 MOVIEPLANET — Esta página usa una API de TMDB
+        </span>
+
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="GitHub"><img src="sources/icons/githubhub.png" alt="" class="social-icon-img"> GitHub</a>
+          <a href="https://www.instagram.com/josjuan00/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram @josjuan00"><img src="sources/icons/instagram.png" alt="" class="social-icon-img"> Instagram</a>
+        </div>
+      </div>
     </div>
   </footer>
 
