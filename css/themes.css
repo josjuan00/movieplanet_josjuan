@@ -1,0 +1,43 @@
+.themes-dropdown-menu {
+  min-width: 170px;
+}
+
+.themes-dropdown-menu .theme-option.active::after {
+  content: "✓";
+  margin-left: auto;
+  color: var(--gold-accent);
+}
+
+.theme-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dot, var(--gold-accent));
+  box-shadow: 0 0 6px var(--dot, var(--gold-accent));
+  flex-shrink: 0;
+}
+
+
+body.theme-cyberpunk {
+  --bg-color: #090a0f;
+  --card-bg: #10141e;
+  --text-primary: #00f3ff;
+  --gold-accent: #00f3ff;
+  --border-focus: #ff0055;
+}
+
+body.theme-redcarpet {
+  --bg-color: #0f0505;
+  --card-bg: #1c0a0a;
+  --text-primary: #fff0f0;
+  --gold-accent: #e63946;
+  --border-focus: #ff4d5a;
+}
+
+body.theme-matrix {
+  --bg-color: #020d04;
+  --card-bg: #051a09;
+  --text-primary: #00ff66;
+  --gold-accent: #00ff66;
+  --border-focus: #00ff66;
+}

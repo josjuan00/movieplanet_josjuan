@@ -1,0 +1,98 @@
+.back-to-home-btn,
+#back-to-home-btn {
+  background-color: var(--card-bg);
+  color: var(--gold-accent);
+  border: 1px solid var(--gold-border);
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.back-to-home-btn:hover,
+#back-to-home-btn:hover {
+  background-color: var(--gold-accent);
+  color: #000;
+  border-color: var(--gold-accent);
+  transform: translateY(-1px);
+}
+
+
+.quiz-btn,
+.filmoteca-dropdown-btn,
+.themes-dropdown-btn,
+.random-btn {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.45rem 0.9rem;
+  border-radius: 20px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.quiz-btn:hover,
+.filmoteca-dropdown-btn:hover,
+.themes-dropdown-btn:hover,
+.random-btn:hover {
+  border-color: var(--border-focus);
+  color: var(--gold-accent);
+}
+
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.load-more-btn,
+#load-more-btn {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-focus);
+  padding: 0.65rem 1.8rem;
+  border-radius: 25px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.load-more-btn:hover,
+#load-more-btn:hover {
+  background-color: var(--gold-accent);
+  color: #000;
+  border-color: var(--gold-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 163, 89, 0.3);
+}
+
+.load-more-btn:disabled,
+#load-more-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}

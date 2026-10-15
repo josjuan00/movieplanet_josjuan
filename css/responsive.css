@@ -1,0 +1,181 @@
+@media (max-width: 768px) {
+  .hero-logo-title {
+    font-size: 2rem;
+  }
+
+  .main-content {
+    padding-top: 85px;
+    padding-bottom: 30px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+
+  .header-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.5rem 0.6rem !important;
+    gap: 0.3rem !important;
+  }
+
+  .header-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.3rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .logo-text {
+    font-size: 0.9rem !important;
+    letter-spacing: 1px !important;
+    white-space: nowrap !important;
+  }
+
+  .quiz-btn,
+  .filmoteca-dropdown-btn,
+  .random-btn,
+  .themes-dropdown-btn,
+  .search-wrapper {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    font-size: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .quiz-btn::before { content: "🎯"; font-size: 0.85rem; }
+  .random-btn::before { content: "🎲"; font-size: 0.85rem; }
+  .filmoteca-dropdown-btn::before { content: "🎬"; font-size: 0.85rem; }
+  .themes-dropdown-btn::before { content: "🎨"; font-size: 0.85rem; }
+  .search-wrapper::before { content: "🔍"; font-size: 0.85rem; }
+
+  .search-wrapper .search-input,
+  .filmoteca-dropdown-btn .arrow {
+    display: none !important;
+  }
+
+  .search-wrapper.active {
+    position: absolute !important;
+    left: 8px;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 16px) !important;
+    height: 38px !important;
+    border-radius: 20px !important;
+    padding: 0 0.8rem !important;
+    justify-content: flex-start !important;
+    z-index: 100;
+    background-color: var(--dropdown-bg);
+    border-color: var(--border-focus);
+  }
+
+  .search-wrapper:not(.active) .search-icon {
+    display: none;
+  }
+
+  .search-wrapper.active::before {
+    content: "" !important;
+  }
+
+  .search-wrapper.active .search-input {
+    display: block !important;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  /* --- MODAL MÓVIL --- */
+  .modal-body {
+    padding: 1.2rem;
+  }
+
+  .modal-top-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .modal-poster {
+    flex: 0 0 auto;
+    width: 170px;
+  }
+
+  .modal-info {
+    width: 100%;
+  }
+
+  
+  .site-footer {
+    position: relative !important;
+  }
+
+  .footer-container {
+    flex-direction: column !important;
+    padding: 0.4rem 0.6rem !important;
+    gap: 0.4rem !important;
+  }
+
+  .film-frame {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .frame-line {
+    display: none !important;
+  }
+
+  .movie-modal.cinema-mode-active #modal-trailer-container iframe {
+    min-height: 220px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .btn-label {
+    display: none;
+  }
+
+  .quiz-btn,
+  .filmoteca-dropdown-btn,
+  .themes-dropdown-btn,
+  .random-btn {
+    padding: 0 0.9rem;
+  }
+
+  .search-wrapper {
+    width: 190px;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo-container {
+    gap: 0.4rem;
+  }
+
+  .themes-dropdown-menu {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-mark {
+    display: none;
+  }
+}

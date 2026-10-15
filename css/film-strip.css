@@ -1,0 +1,107 @@
+.central-film-wrapper {
+  width: 100%;
+  background-color: var(--bg-darker);
+  overflow: hidden;
+  position: relative;
+  padding: 1.2rem 0;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95);
+  border-top: 1px solid rgba(252, 252, 252, 0.15);
+  border-bottom: 1px solid rgba(252, 252, 252, 0.15);
+  margin: auto 0;
+}
+
+.central-film-track {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  width: max-content;
+  animation: infiniteFilmScroll 70s linear infinite;
+  will-change: transform;
+}
+
+.central-film-track:hover {
+  animation-play-state: paused;
+}
+
+.central-frame {
+  flex-shrink: 0;
+  width: 160px;
+  background-color: var(--bg-darker);
+  border: 2px solid #1c1c1c;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.9);
+  position: relative;
+  cursor: pointer;
+}
+
+.frame-sprockets {
+  width: 100%;
+  height: 12px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--bg-color) 0px,
+    var(--bg-color) 10px,
+    transparent 10px,
+    transparent 22px
+  );
+  margin: 4px 0;
+  border-radius: 1px;
+}
+
+.frame-body {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  background-color: var(--bg-frame);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame-num {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--gold-accent);
+  opacity: 0.75;
+  letter-spacing: 1px;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.frame-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.central-frame-gap {
+  flex-shrink: 0;
+  width: 14px;
+  height: 250px;
+  background: repeating-linear-gradient(
+    0deg,
+    var(--bg-black) 0px,
+    var(--bg-black) 4px,
+    #181818 4px,
+    #181818 8px
+  );
+}
+
+@keyframes infiniteFilmScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

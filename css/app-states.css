@@ -1,0 +1,47 @@
+body.hero-mode {
+  overflow: hidden;
+}
+
+body.hero-mode .header {
+  transform: translateY(-100%);
+}
+
+body.hero-mode .site-footer {
+  transform: translateY(100%);
+}
+
+body.hero-mode .main-content {
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+}
+
+body.app-active {
+  overflow-y: auto;
+}
+
+body.app-active .hero-intro {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.app-active .central-film-track {
+  animation-play-state: paused;
+}
+
+body.app-active .header,
+body.app-active .site-footer {
+  transform: translateY(0);
+}
+
+body.app-active .header-container {
+  opacity: 1;
+}
+
+body.app-active .main-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s;
+}

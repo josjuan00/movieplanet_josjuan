@@ -1,0 +1,30 @@
+.category-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1rem;
+}
+
+.category-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.category-card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(242, 240, 233, 0.3);
+  transform: translateY(-3px);
+}
+
+.category-card.active {
+  background-color: rgba(242, 240, 233, 0.1);
+  border-color: var(--text-primary);
+  box-shadow: 0 4px 15px rgba(242, 240, 233, 0.1);
+}

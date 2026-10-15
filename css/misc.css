@@ -1,0 +1,58 @@
+.movie-info h3 {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.movie-details {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.movie-details .rating {
+  color: var(--gold-accent);
+}
+
+#modal-trailer-container iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+}
+
+.theme-select option {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+.filmoteca-dropdown-btn.active {
+  color: var(--gold-accent);
+  border-color: var(--gold-border);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-accent);
+  outline-offset: 2px;
+}
+
+.search-input:focus-visible {
+  outline: none;
+}
+
+
+@media (hover: none) {
+  .movie-info {
+    opacity: 1;
+    transform: none;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0) 55%);
+    padding: 0.8rem;
+  }
+
+  .movie-info h3 {
+    font-size: 0.82rem;
+  }
+}

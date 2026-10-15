@@ -1,0 +1,10 @@
+let currentPage = 1;
+let currentGenre = 'all';
+let currentSearchQuery = '';
+let currentActorId = null;
+let currentSort = 'popular';
+let isPersonalViewActive = false;
+let currentLoadedMovies = [];
+let totalPages = 1;
+let catalogRequestId = 0;
+let quizAnswers = { genre: '', era: '', rating: '' };

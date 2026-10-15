@@ -1,0 +1,33 @@
+.header-container {
+  grid-template-columns: auto 1fr auto;
+  column-gap: 1.5rem;
+}
+
+.logo-container { grid-column: 1; grid-row: 1; }
+
+.header-nav {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  gap: 0.6rem;
+}
+
+.search-wrapper {
+  grid-column: 3;
+  grid-row: 1;
+  width: 240px;
+}
+
+.quiz-btn,
+.filmoteca-dropdown-btn,
+.themes-dropdown-btn,
+.random-btn,
+.search-wrapper {
+  height: 36px;
+  white-space: nowrap;
+}
+
+.search-wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
